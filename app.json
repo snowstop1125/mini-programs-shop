@@ -1,0 +1,50 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/logs/logs"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#000",
+    "navigationBarTitleText": "商城",
+    "navigationBarTextStyle":"white"
+  },
+  "tabBar":{
+    "color":"#666",
+    "selectedColor":"#d74a45",
+    "backgroundColor":"#fff",
+    "borderStyle":"black",
+    "list":[
+      {
+        "pagePath": "pages/index/index",
+        "text":"首页",
+        "iconPath":"image/tabBar0.png",
+        "selectedIconPath":"image/tabBar0-act.png"
+      },
+      {
+        "pagePath": "pages/index/index",
+        "text": "分类",
+        "iconPath": "image/tabBar1.png",
+        "selectedIconPath": "image/tabBar1-act.png"
+      },
+      {
+        "pagePath": "pages/index/index",
+        "text": "购物圈",
+        "iconPath": "image/tabBar2.png",
+        "selectedIconPath": "image/tabBar2-act.png"
+      },
+      {
+        "pagePath": "pages/index/index",
+        "text": "购物车",
+        "iconPath": "image/tabBar3.png",
+        "selectedIconPath": "image/tabBar3-act.png"
+      },
+      {
+        "pagePath": "pages/index/index",
+        "text": "个人中心",
+        "iconPath": "image/tabBar4.png",
+        "selectedIconPath": "image/tabBar4-act.png"
+      }
+    ]
+  }
+}

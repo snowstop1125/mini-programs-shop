@@ -1,0 +1,19 @@
+@import "path/to/zanui-weapp/dist/index.wxss";
+
+
+/**app.wxss**/
+view{
+  color: #666;
+  font-size: 30rpx;
+}
+image{
+  width:100%;
+}
+.container {
+  min-height:100vh;
+  background:#f7f7f7;
+} 
+.section{
+  background: #fff;
+  border-bottom:1px solid #ddd;
+}

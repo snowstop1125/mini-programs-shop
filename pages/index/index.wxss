@@ -1,0 +1,120 @@
+/**index.wxss**/
+.swiper-banner{
+  height:240px;
+}
+.swiper-banner image{
+  width:100%;
+}
+.swiper-banner .wx-swiper-dots.wx-swiper-dots-horizontal{
+  position: absolute;
+  left:80rpx; 
+  bottom:40rpx;
+  text-align: left;
+}
+.swiper-banner .wx-swiper-dot{
+  width:10rpx; 
+  height: 10rpx;
+}
+.swiper-banner .wx-swiper-dot-active{
+  box-shadow:0px 1px 2px rgba(0, 0, 0,.5);  
+}
+
+.index-head{
+  display: flex;
+  position: fixed;
+  top:0;
+  left:0;
+  width:100%;
+  z-index:2;
+} 
+.index-head .toClassify{
+  margin:15rpx 20rpx 0;
+  box-shadow:0px 1px 2px rgba(0, 0, 0,.5);
+}
+.index-head .search{
+  font-size: 20rpx;
+  background:rgba(255, 255, 255,.7);
+  border-radius: 50px;
+  width:70%;
+  height:55rpx;
+  line-height: 55rpx;
+  margin-top:15rpx;
+  padding:0 10rpx 0 30rpx;
+  box-shadow: 0px 1px 2px rgba(0, 0, 0,.5);
+}
+.nav ul{
+  display: flex;
+  flex-wrap:wrap;
+  margin:30rpx 0 10rpx;
+  padding:0 15rpx;
+}
+.nav li{
+  width:20%;
+  font-size: 25rpx;
+  text-align: center;
+  color:#666;
+  margin-bottom:20rpx;
+  
+}
+.nav li navigator{
+  padding:10rpx 0;
+}
+.nav li image{
+  width:80rpx;
+  height:80rpx;
+  margin:0rpx auto 10rpx;
+  display:block;
+}
+.ad-img{
+  padding-bottom:30rpx;
+}
+.ad-img image{
+  display: block;
+  margin: 0 auto;
+  width:90%;
+}
+.scroll_box{
+  width: 100%;
+  /* overflow: hidden; */
+  white-space: nowrap;
+  margin:20rpx 0;
+}
+.scroll_box .topline-title{
+  height: 200rpx;
+  display: inline-block;
+  margin:0 30rpx;
+}
+.scroll_box .item_list{
+  width: 450rpx;
+  height: 200rpx;
+  margin:5px 10rpx;
+  display: inline-block;
+  background:#fff;
+  box-shadow: 0px 0px 2px rgba(114, 114, 114, 0.2);
+  border-radius: 6rpx;
+}
+.scroll_box .item_list navigator{
+  padding:20rpx;
+}
+.scroll_box .item_list .item_l{
+  float: left;
+  width:280rpx;
+}
+.scroll_box .item_author{
+  display: flex;
+  font-size: 30rpx;
+}
+.scroll_box .item_author .img{
+  overflow: hidden; 
+  width:50rpx;
+  height:50rpx;
+  border-radius: 50%;
+}
+ .scroll_box .item_author .img image{
+  width:100%;
+  
+} 
+.scroll_box .item_r{
+  float: left;
+  width:130rpx;
+}

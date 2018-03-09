@@ -1,0 +1,85 @@
+<!--index.wxml-->
+<import src="../../path/to/zanui-weapp/dist/loadmore/index.wxml" />
+
+
+<view class="container">
+  <!--topbar-->
+  <view class="index-head">
+    <navigator class="toClassify" url=""><icon type="info" color="rgba(255,255,255,.7)" size="28"/></navigator>
+    <view class="search">
+      <input placeholder-style="color:#999;" confirm-type="search" maxlength="30" placeholder="搜索" />
+    </view>
+  </view>
+  <view class="section">
+    <swiper class="swiper-banner" 
+    indicator-dots="{{swiperBannerImg.indicatorDots}}"
+    autoplay="{{swiperBannerImg.autoplay}}" 
+    interval="{{swiperBannerImg.interval}}" 
+    duration="{{swiperBannerImg.duration}}" 
+    circular="{{swiperBannerImg.circular}}"
+    indicator-color="rgba(255, 255, 255, .3)" 
+    indicator-active-color="#fff"
+    bindchange="swiperBindchange"
+    style="height:{{swiperBannerImg.imgheights[swiperBannerImg.current]}}px;"
+    >
+      <block wx:for="{{swiperBannerImg.imgSrc}}">
+        <swiper-item>
+          <image src="{{item}}" class="slide-image" mode="widthFix"  bindload="swiperImageLoad" data-id="{{index}}"/>
+        </swiper-item>
+      </block>
+    </swiper>
+    <view class="nav">
+      <ul>
+        <block wx:for="{{nav}}">
+          <li>
+            <navigator url='{{item.navLink}}'>
+              <image src="{{item.navImg}}"/>
+              <p>{{item.navTxt}}</p>
+            </navigator>
+          </li>
+        </block>
+      </ul>
+    </view>
+
+    <view class="ad-img">
+      <navigator url='{{adImg.imgLink}}'>
+        <image src="{{adImg.imgSrc}}" mode="widthFix"/>
+      </navigator>
+    </view>
+  </view>
+
+  <view class="scroll_box">
+    <scroll-view class="scroll-view_H" scroll-x style="width: 100%">
+      <view class="topline-title"><image src="image/index-mytopline.png" mode="widthFix" style="width:100rpx;"/></view>
+      <block wx:for="{{topLine}}">
+        <view class="item_list">
+          <navigator url="{{item.link}}">
+            <view class="item_l">
+              <view class="item_author">
+                <view class="img"> 
+                  <image src="{{item.author.photoSrc}}" mode="widthFix"/>
+                </view> 
+                <p>{{item.author.name}}</p>
+              </view>
+              <view>
+                {{item.detail}}
+              </view>
+            </view>
+            <view class="item_r">
+              <image src="{{item.imgSrc}}" mode="widthFix"/>
+            </view>
+          </navigator>
+        </view>
+      </block>
+     
+      
+     
+    </scroll-view>
+  </view>
+  
+  
+
+    <!-- 加载中 -->
+  <template is="zan-loadmore" data="{{loading: true}}" />
+</view>
+
