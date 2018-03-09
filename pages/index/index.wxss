@@ -177,6 +177,7 @@
 .section-tit .more{
   font-size: 26rpx;
   margin-top: 5rpx;
+  color:#999;
 }
 .section-tit .more span{
   font-size: 30rpx;
