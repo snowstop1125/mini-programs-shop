@@ -12,6 +12,20 @@ view{
 image{
   width:100%;
 }
+p{
+  display: block;
+}
+.red{
+  color: #d74a45;
+}
+.del{
+  text-decoration: line-through;
+  color: #999;
+  font-size: 25rpx;
+}
+.center{
+  text-align: center
+}
 .clearfix:after {
   content: "\0020";
   display: block;

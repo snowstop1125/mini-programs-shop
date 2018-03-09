@@ -76,7 +76,7 @@ Page({
       }
     ],
     adImg:{
-      'imgLink':'',
+      'imgLink':'index',
       'imgSrc':'http://img0.helper-sys.com/images/18/09/59fc4df20b38ed27b73041bd91f9fe70222bf4f7.png?1519969472#w'
     },
     topLine:[
@@ -107,7 +107,48 @@ Page({
         'imgSrc': 'https://img.alicdn.com/bao/uploaded/i3/830018162/TB2gTA1e3nH8KJjSspcXXb3QFXa_!!830018162.jpg_180x180q90.jpg',
         'detail': '11 个轻奢品牌大盘点，哪个最值得买？'
       }
-    ]
+    ],
+    goDiscount: {
+      'morelink':'index',
+      'endTime':'',
+      'goods':[
+        {
+          'link': 'index',
+          'imgSrc': 'http://img2.helper-sys.com/image/23c0ed0b86e81bcda8b2d42640ff6cb428f02277.jpg?1468215134#h',
+          'name': 'Bose 博士 QuietComfort 35/QC35 头戴式无线蓝牙消噪耳机 银色',
+          'price':'2199.00',
+          'costPrice':'2599.00'
+        },
+        {
+          'link': 'index',
+          'imgSrc': 'http://img1.helper-sys.com/images/17/45/8488b67e130aa24e9de9c98b75c869b0b32b2c48.jpg?1510129110#h',
+          'name': 'Ralph Lauren 拉夫劳伦 Wool Menswear Muffler 羊毛围巾 多色可选',
+          'price': '172.00',
+          'costPrice': '198.00'
+        },
+        {
+          'link': 'index',
+          'imgSrc': 'http://img0.helper-sys.com/images/17/37/3c5d0d40af18086c03d796f6e4aec904c91ff230.jpg?1505373060#h',
+          'name': 'Zatchels 猫头鹰水桶包/单肩包/斜挎包 英国工匠手工制作',
+          'price': '393.00',
+          'costPrice': '655.00'
+        },
+        {
+          'link': 'index',
+          'imgSrc': 'http://img0.helper-sys.com/images/17/49/10928f228f8a124dd9998a11567fac4a5e9460a5.jpg?1512355959#h',
+          'name': 'TOM FORD 汤姆福特 Lips & Boys 黑金黑管唇膏/口红 2g 多色可选',
+          'price': '216.00',
+          'costPrice': '339.00'
+        },
+        {
+          'link': 'index',
+          'imgSrc': 'http://img2.helper-sys.com/images/18/10/97ee0b55518f378edda7312d467da480de3e47ef.jpg?1520243669#h',
+          'name': 'Swarovski 施华洛世奇 HOLLOW 幸运滚珠项链 多色可选',
+          'price': '599.00',
+          'costPrice': '1198.00'
+        }
+      ]
+    },
   },
   
   //事件处理函数

@@ -45,7 +45,7 @@
     </view>
 
     <view class="ad-img">
-      <navigator url='{{adImg.imgLink}}'>
+      <navigator url='{{adImg.imgLink}}' hover-class="none">
         <image src="{{adImg.imgSrc}}" mode="widthFix"/>
       </navigator>
     </view>
@@ -82,37 +82,20 @@
     <view class="section go-discount">
       <view class="section-tit">
         <p>汇抢购</p>
-        <navigator class="more" hover-class="none">更多好货秒杀 <span>›</span></navigator>
+        <navigator class="more" url="" hover-class="none">更多好货秒杀 <span>›</span></navigator>
       </view>
       <view class="scroll-box">
         <scroll-view class="scrollX-view" scroll-x>
-          <!-- <block wx:for="{{topLine}}"> -->
-            <view class="scrollX-item" >
-              <navigator url="" hover-class="none">
-                  <image src="https://img.alicdn.com/bao/uploaded/i3/830018162/TB2gTA1e3nH8KJjSspcXXb3QFXa_!!830018162.jpg_180x180q90.jpg" mode="widthFix"/>
-              </navigator>
-            </view>
-            <view class="scrollX-item">
-              <navigator url="">
-                  <image src="https://img.alicdn.com/bao/uploaded/i3/830018162/TB2gTA1e3nH8KJjSspcXXb3QFXa_!!830018162.jpg_180x180q90.jpg" mode="widthFix"/>
-              </navigator>
-            </view>
-            <view class="scrollX-item">
-              <navigator url="">
-                  <image src="https://img.alicdn.com/bao/uploaded/i3/830018162/TB2gTA1e3nH8KJjSspcXXb3QFXa_!!830018162.jpg_180x180q90.jpg" mode="widthFix"/>
-              </navigator>
-            </view>
-            <view class="scrollX-item">
-              <navigator url="">
-                  <image src="https://img.alicdn.com/bao/uploaded/i3/830018162/TB2gTA1e3nH8KJjSspcXXb3QFXa_!!830018162.jpg_180x180q90.jpg" mode="widthFix"/>
-              </navigator>
-            </view>
-            <view class="scrollX-item">
-              <navigator url="">
-                  <image src="https://img.alicdn.com/bao/uploaded/i3/830018162/TB2gTA1e3nH8KJjSspcXXb3QFXa_!!830018162.jpg_180x180q90.jpg" mode="widthFix"/>
-              </navigator>
-            </view>
-          <!-- </block> -->
+           <block wx:for="{{goDiscount.goods}}"> 
+              <view class="scrollX-item center">
+                <navigator url="{{item.link}}" hover-class="none">
+                    <image src="{{item.imgSrc}}" mode="widthFix"/><br/>
+                    <view class="goods-name slh">{{item.name}}</view>
+                    <view class="red">￥{{item.price}}</view>
+                    <p class="del">￥{{item.costPrice}}</p>
+                </navigator>
+              </view>
+           </block> 
         </scroll-view>
       </view>
       
