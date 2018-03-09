@@ -2,6 +2,9 @@
 
 
 /**app.wxss**/
+page{
+  background: #f7f7f7;
+}
 view{
   color: #666;
   font-size: 30rpx;
@@ -9,11 +12,47 @@ view{
 image{
   width:100%;
 }
+.clearfix:after {
+  content: "\0020";
+  display: block;
+  visibility: hidden;
+  clear: both;
+}
 .container {
   min-height:100vh;
-  background:#f7f7f7;
 } 
 .section{
   background: #fff;
-  border-bottom:1px solid #ddd;
+}
+.section-b{
+  border-bottom:1px solid #eee;
+}
+/* 省略号  */
+.slh{
+  overflow: hidden;
+  text-overflow:ellipsis;
+  white-space: nowrap;
+}
+.dslh{
+  display: -webkit-box;
+  white-space:normal;
+  word-break: break-all;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp:2;
+  overflow: hidden;
+  text-overflow:ellipsis;
+}
+
+/*scroll-Y 样式  */
+.scroll-box .scrollX-view{
+  white-space: nowrap;
+  overflow: hidden;
+  width:100%;
+}
+.scroll-box .scrollX-item{
+  display: inline-block;
+  margin-right: 10rpx;
+}
+.scroll-box .scrollX-item navigator{
+  height: 100%;
 }

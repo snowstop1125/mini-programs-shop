@@ -10,7 +10,7 @@
 	"compileType": "miniprogram",
 	"libVersion": "1.9.91",
 	"appid": "wx0d4f8b7495aee688",
-	"projectname": "Shop",
+	"projectname": "mini-programs-shop",
 	"isGameTourist": false,
 	"condition": {
 		"search": {

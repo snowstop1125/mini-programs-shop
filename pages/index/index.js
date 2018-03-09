@@ -81,13 +81,31 @@ Page({
     },
     topLine:[
       {
-        'link':'',
+        'link':'index',
         'author':{
           'photoSrc':'https://img.alicdn.com/tfscom/i3/0/TB2wlvMchSYBuNjSsphXXbGvVXa_!!0-dgshop.jpg_180x180q90.jpg',
-          'name':'搭配小能手'
+          'name':'护肤技巧'
         },
-        'imgSrc':'https://img.alicdn.com/tfscom/i4/1893149177/TB2UBr1n26H8KJjSspmXXb2WXXa_!!1893149177.jpg_180x180xzq90.jpg',
+        'imgSrc':'https://img.alicdn.com/imgextra/i3/6000000004058/TB2JJ7pcCBYBeNjy0FeXXbnmFXa_!!0-tbCommonAudio.jpg_180x180q90.jpg',
         'detail':'新时代主妇，拒绝做黄脸婆！'
+      },
+      {
+        'link': 'index',
+        'author': {
+          'photoSrc': 'http://img.zcool.cn/community/01285b58c3abd1a801219c77945457.png@1280w_1l_2o_100sh.webp',
+          'name': '美食诱惑'
+        },
+        'imgSrc': 'https://img.alicdn.com/tps/i3/0/TB29hatXKOSBuNjy0FdXXbDnVXa_!!0-juitemmedia.jpg_180x180q90.jpg',
+        'detail': '好鸡蛋源于好环境，自然的橘园放养,自由的环境产蛋!好鸡蛋不怕被细瞧'
+      },
+      {
+        'link': 'index',
+        'author': {
+          'photoSrc': 'https://img.alicdn.com/tfscom/i4/1893149177/TB2UBr1n26H8KJjSspmXXb2WXXa_!!1893149177.jpg_180x180xzq90.jpg',
+          'name': '轻奢生活'
+        },
+        'imgSrc': 'https://img.alicdn.com/bao/uploaded/i3/830018162/TB2gTA1e3nH8KJjSspcXXb3QFXa_!!830018162.jpg_180x180q90.jpg',
+        'detail': '11 个轻奢品牌大盘点，哪个最值得买？'
       }
     ]
   },

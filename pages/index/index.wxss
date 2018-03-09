@@ -26,21 +26,41 @@
   left:0;
   width:100%;
   z-index:2;
+  height:90rpx;
 } 
 .index-head .toClassify{
   margin:15rpx 20rpx 0;
+  background: rgba(255, 255, 255,.7);
   box-shadow:0px 1px 2px rgba(0, 0, 0,.5);
+  width: 60rpx;
+  height: 60rpx;
+  line-height:60rpx;
+  border-radius: 50%;
+  text-align: center;
+}
+.index-head .toClassify image{
+  width:50%;
+  vertical-align: middle;
 }
 .index-head .search{
-  font-size: 20rpx;
-  background:rgba(255, 255, 255,.7);
+  font-size: 26rpx;
+  background: rgba(255, 255, 255,.7);
   border-radius: 50px;
-  width:70%;
-  height:55rpx;
-  line-height: 55rpx;
+  width:80%;
+  height:60rpx;
   margin-top:15rpx;
-  padding:0 10rpx 0 30rpx;
+  padding:0 40rpx 0 0rpx;
   box-shadow: 0px 1px 2px rgba(0, 0, 0,.5);
+  display: flex;
+  color: #666;
+}
+.index-head .search image{
+  width:35rpx;
+  margin:15rpx 10rpx 0 20rpx;
+}
+.index-head .search input{
+  height: 100%;
+  width:100%;
 }
 .nav ul{
   display: flex;
@@ -73,48 +93,106 @@
   margin: 0 auto;
   width:90%;
 }
-.scroll_box{
-  width: 100%;
-  /* overflow: hidden; */
-  white-space: nowrap;
+.topline-box{
   margin:20rpx 0;
 }
-.scroll_box .topline-title{
-  height: 200rpx;
-  display: inline-block;
-  margin:0 30rpx;
-}
-.scroll_box .item_list{
+.topline-box .scrollX-item{
   width: 450rpx;
   height: 200rpx;
   margin:5px 10rpx;
-  display: inline-block;
   background:#fff;
   box-shadow: 0px 0px 2px rgba(114, 114, 114, 0.2);
   border-radius: 6rpx;
 }
-.scroll_box .item_list navigator{
-  padding:20rpx;
-}
-.scroll_box .item_list .item_l{
+
+.topline-box .topline-title{
+  height: 200rpx;
   float: left;
-  width:280rpx;
+  margin:5rpx 10rpx 0 20rpx;
 }
-.scroll_box .item_author{
+.topline-box .topline-title image{
+  margin-top:20rpx;
+}
+
+.topline-box .scrollX-item navigator{
+  display: block;
+  padding:20rpx;
+  box-sizing:border-box;
+  height:100%;
+}
+.topline-box .scrollX-item .item_l{
+  float: left;
+  width:250rpx;
+  margin-right:15rpx;
+}
+.topline-box .item_author{
   display: flex;
-  font-size: 30rpx;
+  font-size: 27rpx;
+  align-items:center;
 }
-.scroll_box .item_author .img{
+.topline-box .item_author .img{
   overflow: hidden; 
   width:50rpx;
   height:50rpx;
   border-radius: 50%;
+  margin-right:10rpx;
+  border:1px solid #eee;
 }
- .scroll_box .item_author .img image{
+.topline-box .scrollX-item .item_l .dslh{
+  -webkit-line-clamp: 3;
+  color:#999;
+  font-size: 25rpx;
+  margin-top:10rpx;
+}
+ .topline-box .item_author .img image{
   width:100%;
-  
 } 
-.scroll_box .item_r{
+.topline-box .item_r{
   float: left;
-  width:130rpx;
+  width:145rpx;
+}
+.topline-box .item_r image{
+  margin-top:10rpx;
+  height:145rpx;
+}
+
+.floor-title{
+  text-align: center;
+}
+.floor-title image{
+  width: 150rpx;
+}
+
+.section-tit{
+  display: flex;
+  justify-content:space-between;
+  padding:20rpx 30rpx;
+}
+.section-tit p{
+  font-size: 35rpx;
+  color:#333;
+  font-weight: bold;
+}
+.section-tit .more{
+  font-size: 26rpx;
+  margin-top: 5rpx;
+}
+.section-tit .more span{
+  font-size: 30rpx;
+}
+.go-discount{
+  margin-left: 25rpx;
+}
+.go-discount .scroll-box{
+  padding: 20rpx 0;
+}
+.go-discount .scroll-box .scrollX-item{
+  margin: 0rpx 0rpx 0 30rpx;
+}
+.go-discount .scroll-box .scrollX-item:last-child{
+  margin-right: 30rpx;
+}
+.go-discount .scroll-box .scrollX-item image{
+  width:180rpx;
+  height: 180rpx;
 }
