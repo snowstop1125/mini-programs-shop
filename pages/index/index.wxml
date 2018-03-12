@@ -4,7 +4,7 @@
 
 <view class="container">
   <!--topbar-->
-  <view class="index-head">
+  <view class="index-head {{showTop?'noTop':''}}">
     <navigator class="toClassify" url="">
       <image src="../../image/topbar-classify.png" mode="widthFix"/>
     </navigator>
@@ -153,26 +153,57 @@
           </navigator>
         </view>
       </block>
-     
     </view>
-   
-   
-    <!--购.优惠 模块  -->
-    <view class='go-discount-optional'>
-      <block wx:for="{{discountOpt}}">
-        <view class="opt-item">
-          <navigator url="{{item.link}}" hover-class="none">
+
+    <view class="ad-img">
+      <navigator url='{{adImg.imgLink}}' hover-class="none">
+        <image src="http://img1.helper-sys.com/images/18/10/768bbce16bf0a7cbd693b2e87c6633329d49506d.png?1520586357#w" mode="widthFix"/>
+      </navigator>
+    </view>
+  </view>
+  
+    
+
+       <!--购.品质  -->
+  <view class="floor go-quality">
+    <view class="floor-tit">
+      <image src="image/floor-tit1.png"  mode="widthFix"/>
+    </view>
+    <!--自选模板-3图  -->
+    <view class="go-optional">
+      <view class="opt-item opt-item-3">
+          <navigator url="{{goQualityOpt.optional3.link}}" hover-class="none">
+            <p class="opt-tit">{{goQualityOpt.optional3.title}}</p>
+            <p class="opt-subtit">{{goQualityOpt.optional3.subtitle}}</p>
+            <view class="flex">
+              <block wx:for="{{goQualityOpt.optional3.imgArr}}">
+                <image src="{{item}}" mode="widthFix"/>
+              </block>
+            </view>
+          </navigator>
+      </view>
+      <view class="opt-item opt-item-s1">
+        <navigator  url="{{goQualityOpt.optional1.link}}" hover-class="none">
+          <p class="opt-tit">{{goQualityOpt.optional1.title}}</p>
+          <p class="opt-subtit">{{goQualityOpt.optional1.subtitle}}</p>
+          <image src="{{goQualityOpt.optional1.imgSrc}}" mode="widthFix"/>
+        </navigator>
+      </view>
+      <block wx:for="{{goQualityOpt.optional2}}">
+        <view class="opt-item opt-item-2">
+          <navigator  url="{{item.link}}" hover-class="none">
             <p class="opt-tit">{{item.title}}</p>
             <p class="opt-subtit">{{item.subtitle}}</p>
-            <image src="{{item.imgSrc}}" mode="widthFix"/>
+            <view class="flex">
+              <block wx:for="{{item.imgArr}}">
+                <image src="{{item}}" mode="widthFix"/>
+              </block>
+            </view>
           </navigator>
-         
         </view>
       </block>
     </view>
   </view>
-  
-
 
     <!-- 加载中 -->
   <template is="zan-loadmore" data="{{loading: true}}" />

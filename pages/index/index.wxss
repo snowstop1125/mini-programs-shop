@@ -28,6 +28,23 @@
   z-index:2;
   height:90rpx;
 } 
+.index-head.noTop{
+  background:#fff;
+  border-bottom:1px solid #ddd;
+  transition: .5s all ease;
+}
+.index-head.noTop .toClassify{
+  box-shadow: 0px 0px 0px rgba(0, 0, 0,0);
+}
+.index-head.noTop .toClassify image{
+  width:70%;
+  transition: .1s all ease;
+  margin-top:10rpx;
+}
+.index-head.noTop .search{
+  box-shadow: 0px 0px 0px rgba(0, 0, 0,0);
+  background:#f7f7f7;
+}
 .index-head .toClassify{
   margin:15rpx 20rpx 0;
   background: rgba(255, 255, 255,.7);
@@ -45,7 +62,7 @@
   font-size: 26rpx;
   background: rgba(255, 255, 255,.7);
   border-radius: 50px;
-  width:80%;
+  width:77%;
   height:60rpx;
   margin-top:15rpx;
   padding:0 40rpx 0 0rpx;
@@ -90,7 +107,7 @@
 .ad-img image{
   display: block;
   margin: 0 auto;
-  width:90%;
+  width:93%;
 }
 .topline-box{
   margin:20rpx 0;
