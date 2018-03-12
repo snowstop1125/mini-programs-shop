@@ -108,9 +108,14 @@ Page({
         'detail': '11 个轻奢品牌大盘点，哪个最值得买？'
       }
     ],
-    goDiscount: {
+    goDiscountHqg: {
       'morelink':'index',
-      'endTime':'',
+      'endTime':'1520848040',
+      'clock':{
+        'hours':'00',
+        'minutes':'00',
+        'seconds':'00'
+      },
       'goods':[
         {
           'link': 'index',
@@ -149,6 +154,76 @@ Page({
         }
       ]
     },
+    goDiscountOpt:[
+      {
+        'title':'品牌特卖',
+        'subtitle':'每满300减100',
+        'imgSrc':'https://m.360buyimg.com/mobilecms/s176x176_jfs/t8848/335/497999876/24107/7e58c46/59a924e5N831e0141.jpg!q70.jpg',
+        'link':'index'
+      },
+      {
+        'title': '玩3C',
+        'subtitle': '领券最高减1000',
+        'imgSrc': 'https://m.360buyimg.com/mobilecms/s142x142_jfs/t19144/287/350032203/12794/f9bddb74/5a6ef6a4Nc6c37bf2.jpg!q70.jpg',
+        'link': 'index'
+      }
+    ],
+    goQualityOpt:{
+      'optional3':{
+        'title':'新品发布',
+        'subtitle':'格力变频空调 火爆开售',
+        'link':'index',
+        'imgArr':[
+          'https://m.360buyimg.com/n12/jfs/t10042/337/2660027641/78633/d97f3e2c/59fa733dN86745b06.jpg!q70.jpg',
+          'https://m.360buyimg.com/img/s307x307_jfs/t14380/320/1115058386/70159/bbf9f9e/5a44bac5N40fe8154.jpg',
+          'https://m.360buyimg.com/img/s307x307_jfs/t8455/293/1381797219/142414/48b1ae34/59b8ddebN137f4762.jpg'
+        ]
+      },
+      'optional1':{
+        'link':'index',
+        'title':'全球购',
+        'subtitle':'爆款直降',
+        'imgSrc':'https://m.360buyimg.com/n1/s176x176_jfs/t14398/281/1003456109/468475/47d67fc0/5a40bc04N11d15e7d.jpg'
+      },
+      'optional2': [
+        {
+          'title': '美食',
+          'subtitle': '进口美味零食',
+          'link': 'index',
+          'imgArr': [
+            'https://m.360buyimg.com/mobilecms/s240x240_jfs/t14473/103/2042876100/41836/766c1953/5a697f47Nc952ed7f.jpg',
+            'https://m.360buyimg.com/mobilecms/s142x142_jfs/t19558/229/346712633/87395/5d5976a4/5a6ec808N222666d3.jpg'
+          ]
+        },
+        {
+          'title': '热卖女装',
+          'subtitle': '潮流设计精选',
+          'link': 'index',
+          'imgArr': [
+            'https://m.360buyimg.com/mobilecms/s142x142_jfs/t18271/343/357496940/68646/2f930853/5a6ee1a5N755adea1.jpg',
+            'https://img10.360buyimg.com/focus/jfs/t16375/270/2298165642/4388/99ff4997/5a9fb689Nc0bd43f4.jpg'
+          ]
+        },
+        {
+          'title': '宠物用品',
+          'subtitle': '萌宠high起来！',
+          'link': 'index',
+          'imgArr': [
+            'https://m.360buyimg.com/mobilecms/s142x142_jfs/t8404/285/1199771170/23383/18e00936/59b65491Neb8d8d44.jpg',
+            'https://m.360buyimg.com/babel/s330x330_jfs/t14932/345/544114554/161785/9c5ef7a5/5a30a64fN4985a83e.jpg'
+          ]
+        },{
+          'title': '电脑办公',
+          'subtitle': '满减狂欢',
+          'link': 'index',
+          'imgArr': [
+            'https://m.360buyimg.com/mobilecms/s142x142_jfs/t18976/18/704020019/79995/36a15b0c/5aa15c29Nedf85a2a.png',
+            'https://m.360buyimg.com/babel/s390x390_jfs/t3268/132/227094941/162137/a1ffa50f/57abe0a0Ne962f9b2.jpg'
+          ]
+        }
+       
+      ],
+    }
   },
   
   //事件处理函数
@@ -184,6 +259,19 @@ Page({
         }
       })
     }
+
+    var that=this;
+    var leftTimer=setInterval(function () {
+      var endTime = that.data.goDiscountHqg.endTime;
+      var Countdown = Util.countdown(endTime);
+      that.setData({
+        'goDiscountHqg.clock.hours': Countdown.hours,
+        'goDiscountHqg.clock.minutes': Countdown.minutes,
+        'goDiscountHqg.clock.seconds': Countdown.seconds
+      })
+      
+    }, 1000)
+    
   },
   getUserInfo: function(e) {
     console.log(e)

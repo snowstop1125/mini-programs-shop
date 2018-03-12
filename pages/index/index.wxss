@@ -36,11 +36,10 @@
   height: 60rpx;
   line-height:60rpx;
   border-radius: 50%;
-  text-align: center;
 }
 .index-head .toClassify image{
   width:50%;
-  vertical-align: middle;
+  margin:16rpx auto 0;
 }
 .index-head .search{
   font-size: 26rpx;
@@ -155,13 +154,16 @@
   margin-top:10rpx;
   height:145rpx;
 }
-
-.floor-title{
-  text-align: center;
-  margin-bottom:20rpx;
+.floor{
+  margin-bottom:25rpx;
 }
-.floor-title image{
+.floor .floor-tit{
+  text-align: center;
+  margin-bottom:25rpx;
+}
+.floor .floor-tit image{
   width: 150rpx;
+  margin:0 auto;
 }
 
 .section-tit{
@@ -169,10 +171,24 @@
   justify-content:space-between;
   padding:20rpx 30rpx;
 }
-.section-tit p{
+.section-tit .tit-main{
   font-size: 35rpx;
   color:#333;
   font-weight: bold;
+}
+.section-tit .tit-main span{
+  font-size: 25rpx;
+  font-weight: 500;
+  margin-left:20rpx;
+  color:#ccc;
+  margin-top:-5rpx;
+}
+.section-tit .tit-main span b{
+  margin: 0rpx 5rpx;
+  padding: 5rpx;
+  background: #ccc;
+  color:#fff;
+  border-radius: 6rpx;
 }
 .section-tit .more{
   font-size: 26rpx;
@@ -182,8 +198,10 @@
 .section-tit .more span{
   font-size: 30rpx;
 }
-.go-discount{
+.go-discount .go-discount-hqg{
   margin-left: 25rpx;
+  border-radius: 0rpx 0rpx 6rpx 6rpx;
+  margin-bottom:20rpx;
 }
 .go-discount .scroll-box{
   padding:10rpx 0 30rpx;
@@ -198,4 +216,53 @@
 }
 .go-discount .scroll-box .scrollX-item .goods-name{
   margin-top:5rpx;
+  font-size: 27rpx;
+}
+/*自选模块  */
+.go-optional{
+  padding:0 25rpx 0;
+  display: flex;
+  flex-wrap:wrap;
+}
+.go-optional .opt-item{
+  background:#fff;
+  border-radius: 6rpx;
+  padding:25rpx 20rpx 20rpx;
+  box-sizing: border-box;
+}
+.go-optional .opt-item .opt-tit{
+  font-size: 32rpx;
+  font-weight: bold;
+  color:#333;
+  margin:0 0 5rpx 10rpx;
+}
+.go-optional .opt-item .opt-subtit{
+  font-size: 26rpx;
+  color:#999;
+  margin:0 0 10rpx 10rpx;
+}
+
+.go-optional .opt-item-1,.go-optional .opt-item-2{
+  width:341rpx;
+  margin:0 20rpx 20rpx 0;
+}
+.go-optional .opt-item-1:nth-child(2n),.go-optional .opt-item-2:nth-child(2n){
+  margin-right:0rpx;
+}
+.go-optional .opt-item-3{
+  width:520rpx;
+  margin:0 20rpx 20rpx 0
+}
+.go-optional .opt-item-3 .flex,.go-optional .opt-item-2 .flex{
+  justify-content: space-around;
+}
+.go-optional .opt-item-3 image{
+  width:128rpx;
+}
+.go-optional .opt-item-s1{
+  width:160rpx;
+  margin:0rpx 0rpx 20rpx 0
+}
+.go-optional .opt-item-s1 image,.go-optional .opt-item-2 image{
+  width:128rpx;
 }

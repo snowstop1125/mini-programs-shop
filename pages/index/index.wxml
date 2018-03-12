@@ -75,18 +75,19 @@
     </scroll-view>
   </view>
   <!--购.优惠  -->
-  <view class="index-floor ">
-    <view class="floor-title">
+  <view class="floor go-discount">
+    <view class="floor-tit">
       <image src="image/floor-tit1.png"  mode="widthFix"/>
     </view>
-    <view class="section go-discount">
+    <!--汇抢购  -->
+    <view class="section go-discount-hqg">
       <view class="section-tit">
-        <p>汇抢购</p>
-        <navigator class="more" url="" hover-class="none">更多好货秒杀 <span>›</span></navigator>
+        <view class="tit-main">汇抢购<span><b>{{goDiscountHqg.clock.hours}}</b>:<b>{{goDiscountHqg.clock.minutes}}</b>:<b>{{goDiscountHqg.clock.seconds}}</b></span></view>
+        <navigator class="more" url="{{goDiscountHqg.morelink}}" hover-class="none">更多好货抢购 <span>›</span></navigator>
       </view>
       <view class="scroll-box">
         <scroll-view class="scrollX-view" scroll-x>
-           <block wx:for="{{goDiscount.goods}}"> 
+           <block wx:for="{{goDiscountHqg.goods}}"> 
               <view class="scrollX-item center">
                 <navigator url="{{item.link}}" hover-class="none">
                     <image src="{{item.imgSrc}}" mode="widthFix"/><br/>
@@ -98,7 +99,76 @@
            </block> 
         </scroll-view>
       </view>
-      
+    </view>
+    <!--购.优惠 模块  -->
+    <view class='go-optional'>
+      <block wx:for="{{goDiscountOpt}}">
+        <view class="opt-item opt-item-1">
+          <navigator url="{{item.link}}" hover-class="none">
+            <p class="opt-tit">{{item.title}}</p>
+            <p class="opt-subtit">{{item.subtitle}}</p>
+            <image src="{{item.imgSrc}}" mode="widthFix"/>
+          </navigator>
+         
+        </view>
+      </block>
+    </view>
+  </view>
+
+    <!--购.品质  -->
+  <view class="floor go-quality">
+    <view class="floor-tit">
+      <image src="image/floor-tit1.png"  mode="widthFix"/>
+    </view>
+    <!--自选模板-3图  -->
+    <view class="go-optional">
+      <view class="opt-item opt-item-3">
+          <navigator url="{{goQualityOpt.optional3.link}}" hover-class="none">
+            <p class="opt-tit">{{goQualityOpt.optional3.title}}</p>
+            <p class="opt-subtit">{{goQualityOpt.optional3.subtitle}}</p>
+            <view class="flex">
+              <block wx:for="{{goQualityOpt.optional3.imgArr}}">
+                <image src="{{item}}" mode="widthFix"/>
+              </block>
+            </view>
+          </navigator>
+      </view>
+      <view class="opt-item opt-item-s1">
+        <navigator  url="{{goQualityOpt.optional1.link}}" hover-class="none">
+          <p class="opt-tit">{{goQualityOpt.optional1.title}}</p>
+          <p class="opt-subtit">{{goQualityOpt.optional1.subtitle}}</p>
+          <image src="{{goQualityOpt.optional1.imgSrc}}" mode="widthFix"/>
+        </navigator>
+      </view>
+      <block wx:for="{{goQualityOpt.optional2}}">
+        <view class="opt-item opt-item-2">
+          <navigator  url="{{item.link}}" hover-class="none">
+            <p class="opt-tit">{{item.title}}</p>
+            <p class="opt-subtit">{{item.subtitle}}</p>
+            <view class="flex">
+              <block wx:for="{{item.imgArr}}">
+                <image src="{{item}}" mode="widthFix"/>
+              </block>
+            </view>
+          </navigator>
+        </view>
+      </block>
+     
+    </view>
+   
+   
+    <!--购.优惠 模块  -->
+    <view class='go-discount-optional'>
+      <block wx:for="{{discountOpt}}">
+        <view class="opt-item">
+          <navigator url="{{item.link}}" hover-class="none">
+            <p class="opt-tit">{{item.title}}</p>
+            <p class="opt-subtit">{{item.subtitle}}</p>
+            <image src="{{item.imgSrc}}" mode="widthFix"/>
+          </navigator>
+         
+        </view>
+      </block>
     </view>
   </view>
   
