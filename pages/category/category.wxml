@@ -1,0 +1,23 @@
+<!--pages/category/category.wxml-->
+
+
+<view class="container">
+  <!--topbar-->
+  <view class="index-head noTop">
+    <view class="search" bindtap="toSearchPage">
+      <image src="../../image/topbar-search.png" mode="widthFix"/>
+      <input placeholder-style="color:#999;" confirm-type="search" placeholder="搜索" disabled="true"/>
+    </view>
+  </view>
+
+  <view class="category-main">
+    <view class="scroll-box category-lv1">
+      <scroll-view scroll-y bindscroll="catScroll">
+        <view data-id="0" class="scroll-view-item {{category_act==0 ? 'active':''}}" bindtap="changeCategoryLv1">热搜推荐</view>
+        <block wx:for="{{categoryList}}" wx:key="{{item.cat_id}}">
+          <view data-id="{{item.cat_id}}" class="scroll-view-item {{category_act==item.cat_id ? 'active':''}}" bindtap="changeCategoryLv1">{{item.cat_name}}</view>
+        </block>
+      </scroll-view>
+    </view>
+  </view>
+</view>

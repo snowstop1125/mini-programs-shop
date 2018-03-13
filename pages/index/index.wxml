@@ -5,12 +5,12 @@
 <view class="container">
   <!--topbar-->
   <view class="index-head {{showTop?'noTop':''}}">
-    <navigator class="toClassify" url="">
-      <image src="../../image/topbar-classify.png" mode="widthFix"/>
-    </navigator>
-    <view class="search">
+    <view class="toClassify">
+      <image src="../../image/topbar-classify.png" mode="widthFix" bindtap='toCategoryPage'/>
+    </view>
+    <view class="search"  bindtap="toSearchPage">
       <image src="../../image/topbar-search.png" mode="widthFix"/>
-      <input placeholder-style="color:#999;" confirm-type="search" placeholder="搜索" />
+      <input placeholder-style="color:#999;" confirm-type="search" placeholder="搜索喜欢的商品" disabled="true"/>
     </view>
   </view>
   <view class="section section-b">
@@ -205,7 +205,10 @@
     </view>
   </view>
 
-    <!-- 加载中 -->
-  <template is="zan-loadmore" data="{{loading: true}}" />
+  <!-- 加载中 -->
+  <!-- <template is="zan-loadmore" data="{{loading: true}}" /> -->
 </view>
 
+<view class="gotopBtn" bindtap="goTop" wx:if="{{showTop}}">
+  <image src='../../image/top.png' mode="widthFix"/>
+</view>

@@ -1,28 +1,30 @@
 {
-  "pages":[
+  "pages": [
     "pages/index/index",
-    "pages/logs/logs"
+    "pages/logs/logs",
+    "pages/category/category",
+    "pages/search/search"
   ],
-  "window":{
-    "backgroundTextStyle":"light",
-    "navigationBarBackgroundColor": "#000",
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "white",
     "navigationBarTitleText": "商城",
-    "navigationBarTextStyle":"white"
+    "navigationBarTextStyle": "black"
   },
-  "tabBar":{
-    "color":"#666",
-    "selectedColor":"#d74a45",
-    "backgroundColor":"#fff",
-    "borderStyle":"black",
-    "list":[
+  "tabBar": {
+    "color": "#666",
+    "selectedColor": "#d74a45",
+    "backgroundColor": "#fff",
+    "borderStyle": "black",
+    "list": [
       {
         "pagePath": "pages/index/index",
-        "text":"首页",
-        "iconPath":"image/tabBar0.png",
-        "selectedIconPath":"image/tabBar0-act.png"
+        "text": "首页",
+        "iconPath": "image/tabBar0.png",
+        "selectedIconPath": "image/tabBar0-act.png"
       },
       {
-        "pagePath": "pages/index/index",
+        "pagePath": "pages/category/category",
         "text": "分类",
         "iconPath": "image/tabBar1.png",
         "selectedIconPath": "image/tabBar1-act.png"

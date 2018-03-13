@@ -19,65 +19,6 @@
   box-shadow:0px 1px 2px rgba(0, 0, 0,.5);  
 }
 
-.index-head{
-  display: flex;
-  position: fixed;
-  top:0;
-  left:0;
-  width:100%;
-  z-index:2;
-  height:90rpx;
-} 
-.index-head.noTop{
-  background:#fff;
-  border-bottom:1px solid #ddd;
-  transition: .5s all ease;
-}
-.index-head.noTop .toClassify{
-  box-shadow: 0px 0px 0px rgba(0, 0, 0,0);
-}
-.index-head.noTop .toClassify image{
-  width:70%;
-  transition: .1s all ease;
-  margin-top:10rpx;
-}
-.index-head.noTop .search{
-  box-shadow: 0px 0px 0px rgba(0, 0, 0,0);
-  background:#f7f7f7;
-}
-.index-head .toClassify{
-  margin:15rpx 20rpx 0;
-  background: rgba(255, 255, 255,.7);
-  box-shadow:0px 1px 2px rgba(0, 0, 0,.5);
-  width: 60rpx;
-  height: 60rpx;
-  line-height:60rpx;
-  border-radius: 50%;
-}
-.index-head .toClassify image{
-  width:50%;
-  margin:16rpx auto 0;
-}
-.index-head .search{
-  font-size: 26rpx;
-  background: rgba(255, 255, 255,.7);
-  border-radius: 50px;
-  width:77%;
-  height:60rpx;
-  margin-top:15rpx;
-  padding:0 40rpx 0 0rpx;
-  box-shadow: 0px 1px 2px rgba(0, 0, 0,.5);
-  display: flex;
-  color: #666;
-}
-.index-head .search image{
-  width:35rpx;
-  margin:15rpx 10rpx 0 20rpx;
-}
-.index-head .search input{
-  height: 100%;
-  width:100%;
-}
 .nav ul{
   display: flex;
   flex-wrap:wrap;

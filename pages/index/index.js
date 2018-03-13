@@ -225,10 +225,18 @@ Page({
       ],
     }
   },
-  
+  toSearchPage: function () {//跳转到搜索页
+    wx.navigateTo({
+      url: '../search/search'
+    })
+  },
+  toCategoryPage:function(){
+    wx.reLaunch({
+      url: '../category/category'
+    })
+  },
   onPageScroll: function (e) { // 获取滚动条当前位置
-    console.log(e)
-    if(e.scrollTop>200){
+    if(e.scrollTop>300){
       this.setData({
         showTop: true
       })

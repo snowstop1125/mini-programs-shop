@@ -1,0 +1,35 @@
+/* pages/category/category.wxss */
+page{
+  background: #fff;
+}
+.index-head.noTop{
+  background:#fff;
+  border-bottom:1px solid #ddd;
+  transition: none;
+}
+.index-head .search{
+  margin:15rpx auto 0;
+  width:85%;
+}
+.category-main{
+  padding-top: 90rpx;
+}
+.category-main scroll-view{
+  height: calc(100vh - 90rpx);
+}
+.category-lv1{
+  width: 170rpx;
+}
+
+.category-lv1 .scroll-view-item{
+  height: 100rpx;
+  line-height: 100rpx;
+  text-align: center;
+  font-size:25rpx;
+  background: #f7f7f7;
+}
+.category-lv1 .scroll-view-item.active{
+  background:#fff;
+  font-size: 28rpx;
+  color:#d74a45;
+}
