@@ -13,14 +13,17 @@ page{
 }
 .category-main{
   padding-top: 90rpx;
+  display: flex;
 }
 .category-main scroll-view{
   height: calc(100vh - 90rpx);
 }
 .category-lv1{
-  width: 170rpx;
+  width: 25%;
 }
-
+.category-lv2{
+  width: 75%;
+}
 .category-lv1 .scroll-view-item{
   height: 100rpx;
   line-height: 100rpx;
@@ -32,4 +35,26 @@ page{
   background:#fff;
   font-size: 28rpx;
   color:#d74a45;
+}
+.category-lv2 .cat_lv2_tit{
+  color: #333;
+  font-weight: bold;
+  margin:30rpx 0 40rpx 30rpx;
+  font-size: 26rpx;
+}
+.cat_lv3_con{
+  display: flex;
+  flex-wrap:wrap;
+  padding:0 30rpx;
+
+}
+.cat_lv3_con .cat_lv3_item{
+  width:147rpx;
+  text-align: center;
+  margin:0 10rpx 10rpx;
+}
+.cat_lv3_con .cat_lv3_item image{
+  width:120rpx;
+  max-height: 120rpx;
+  margin: 0 auto 10rpx;
 }

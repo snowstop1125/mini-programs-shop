@@ -1,8 +1,9 @@
 {
   "pages": [
+    "pages/category/category",
     "pages/index/index",
     "pages/logs/logs",
-    "pages/category/category",
+    
     "pages/search/search"
   ],
   "window": {

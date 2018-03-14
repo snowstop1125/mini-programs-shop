@@ -12,12 +12,43 @@
 
   <view class="category-main">
     <view class="scroll-box category-lv1">
-      <scroll-view scroll-y bindscroll="catScroll">
-        <view data-id="0" class="scroll-view-item {{category_act==0 ? 'active':''}}" bindtap="changeCategoryLv1">热搜推荐</view>
+      <scroll-view scroll-y bindscroll="catScroll" scroll-top="">
+        <view data-id="hot" class="scroll-view-item {{category_act=='hot' ? 'active':''}}" bindtap="changeCategoryLv1">热搜推荐</view>
         <block wx:for="{{categoryList}}" wx:key="{{item.cat_id}}">
-          <view data-id="{{item.cat_id}}" class="scroll-view-item {{category_act==item.cat_id ? 'active':''}}" bindtap="changeCategoryLv1">{{item.cat_name}}</view>
+          <view data-id="{{index}}" class="scroll-view-item {{category_act==index ? 'active':''}}" bindtap="changeCategoryLv1">{{item.cat_name}}</view>
         </block>
       </scroll-view>
+    </view>
+
+    <view class="scroll-box category-lv2">
+      <scroll-view scroll-y wx:if="{{category_act=='hot'}}">
+        <block wx:for="{{hotRecommend}}">
+         <view class='cat_lv2_tit'>{{item.cat_name}}</view>
+          <view class="cat_lv3_con">
+            <block wx:for="{{item.cat_lv3}}" wx:for-item="itemLv3">
+              <view class="cat_lv3_item">
+                <image src="{{itemLv3.cat_img}}" mode="widthFix"/>
+                <view>{{itemLv3.cat_name}}</view>
+              </view>
+            </block>
+          </view>
+        </block>
+      </scroll-view>
+      <block wx:for="{{categoryList}}">
+        <scroll-view scroll-y wx:if="{{category_act==index}}">
+          <block wx:for="{{item.cat_lv2}}"  wx:for-item="itemLv2">
+            <view class='cat_lv2_tit'>{{itemLv2.cat_name}}</view>
+            <view class="cat_lv3_con">
+              <block wx:for="{{itemLv2.cat_lv3}}" wx:for-item="itemLv3">
+               <view class="cat_lv3_item">
+                <image src="{{itemLv3.cat_img}}" mode="widthFix"/>
+                <view>{{itemLv3.cat_name}}</view>
+               </view>
+              </block>
+            </view>
+          </block>
+        </scroll-view>
+      </block>
     </view>
   </view>
 </view>

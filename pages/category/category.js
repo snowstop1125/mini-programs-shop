@@ -5,7 +5,44 @@ Page({
    * 页面的初始数据
    */
   data: {
-    category_act:'0',
+    category_act:'hot',
+    hotRecommend:[
+      {
+        'cat_name':'热门搜索',
+        'cat_lv3':[
+          {
+            'cat_name': '手机',
+            'cat_img': 'https://img13.360buyimg.com/focus/jfs/t12352/319/549091054/4783/cea2850e/5a0e797dN12ac35a9.jpg'
+          }, {
+            'cat_name': '充电宝',
+            'cat_img': 'https://img20.360buyimg.com/focus/jfs/t14347/287/292388718/1284/559f03ee/5a2f98d5Ncfcef53e.jpg'
+          }, {
+            'cat_name': '耳机',
+            'cat_img': 'https://img30.360buyimg.com/focus/jfs/t19282/66/487901773/1169/9ea7cd58/5a7d5834N72dddd3b.jpg'
+          },{
+            'cat_name': '剃须刀',
+            'cat_img': 'https://img20.360buyimg.com/focus/jfs/t12010/69/2478214759/5881/9d96908e/5a7d596fN9c7bf5f0.jpg'
+          }
+        ]
+      }, {
+        'cat_name': '女士热搜',
+        'cat_lv3': [
+          {
+            'cat_name': '手机',
+            'cat_img': 'https://img13.360buyimg.com/focus/jfs/t12352/319/549091054/4783/cea2850e/5a0e797dN12ac35a9.jpg'
+          }, {
+            'cat_name': '充电宝',
+            'cat_img': 'https://img20.360buyimg.com/focus/jfs/t14347/287/292388718/1284/559f03ee/5a2f98d5Ncfcef53e.jpg'
+          }, {
+            'cat_name': '耳机',
+            'cat_img': 'https://img30.360buyimg.com/focus/jfs/t19282/66/487901773/1169/9ea7cd58/5a7d5834N72dddd3b.jpg'
+          }, {
+            'cat_name': '剃须刀',
+            'cat_img': 'https://img20.360buyimg.com/focus/jfs/t12010/69/2478214759/5881/9d96908e/5a7d596fN9c7bf5f0.jpg'
+          }
+        ]
+      }
+    ],
     categoryList: [
       {
         'cat_id':'1',
@@ -18,7 +55,7 @@ Page({
               {
                 'cat_id':'111',
                 'cat_name':'Apple',
-                'cat_img':''
+                'cat_img':'https://img20.360buyimg.com/focus/jfs/t13759/194/897734755/2493/1305d4c4/5a1692ebN8ae73077.jpg'
               }
             ]
           },
@@ -45,6 +82,16 @@ Page({
             'cat_lv3': [
               {
                 'cat_id': '211',
+                'cat_name': '连衣裙',
+                'cat_img': ''
+              }
+            ]
+          }, {
+            'cat_id': '22',
+            'cat_name': '裙子',
+            'cat_lv3': [
+              {
+                'cat_id': '221',
                 'cat_name': '连衣裙',
                 'cat_img': ''
               }
@@ -125,13 +172,15 @@ Page({
     })
   },
   catScroll:function(e){
-    console.log(e)
+    // console.log(e)
   },
   changeCategoryLv1:function(e){
     console.log(e.target.offsetTop)
+    
     this.setData({
       category_act: e.target.dataset.id
     })
+    console.log(this.data.category_act)
   },
   /**
    * 生命周期函数--监听页面加载
