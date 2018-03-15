@@ -178,7 +178,7 @@ Page({
     console.log(e.target.offsetTop)
     
     this.setData({
-      category_act: e.target.dataset.id
+      category_act: e.target.dataset.index
     })
     console.log(this.data.category_act)
   },

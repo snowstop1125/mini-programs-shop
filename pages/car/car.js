@@ -1,23 +1,13 @@
-// pages/search/search.js
+// pages/car/car.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    history:['chanel口红','iphoneX'],
-    hot:['粉底','iphoneX','进口奶粉','眼线笔','液晶电视','Ipad','连衣裙','春季外套']
+  
   },
-  goBack: function () {
-    wx.navigateBack({
-      delta: 1
-    })
-  },
-  clearHis:function(){
-    this.setData({
-      history:[]
-    })
-  },
+
   /**
    * 生命周期函数--监听页面加载
    */

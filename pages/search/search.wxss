@@ -1,1 +1,35 @@
 /* pages/search/search.wxss */
+page{
+  background: #fff;
+}
+.index-head .search{
+  margin:15rpx 10rpx 0 25rpx;
+  width:80%;
+}
+.index-head .toClassify{
+  margin:12rpx 0 0 0rpx;
+}
+.search-con{
+  padding:30rpx 30rpx;
+}
+.search-con .tit{
+  font-size: 28rpx;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom:25rpx;
+}
+.search-con .tit span{
+  color:#f00;
+  font-size: 26rpx;
+}
+.search-con ul{
+  display: flex;
+  flex-wrap: wrap;
+  font-size: 26rpx;
+}
+.search-con ul li navigator{
+  padding:10rpx 20rpx;
+  background:#f7f7f7;
+  margin:0 15rpx 15rpx 0;
+  border-radius: 10rpx;
+}

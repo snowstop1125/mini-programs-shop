@@ -1,2 +1,41 @@
-<!--pages/search/search.wxml-->
-<text>pages/search/search.wxml</text>
+<view class="wrap">
+  <!--topbar-->
+  <view class="index-head noTop">
+    <view class="search" >
+      <image src="../../path/to/public/image/topbar-search.png" mode="widthFix"/>
+      <input placeholder-style="color:#999;" confirm-type="search" placeholder="搜索" focus="true"/>
+    </view>
+     <view class="toClassify">
+      <image src="../../path/to/public/image/topbar-cancel.png" mode="widthFix" bindtap='goBack'/>
+    </view>
+  </view>
+  <view class="container hasTopbar">
+    <block wx:if="{{history.length>0}}">
+      <view class="search-con">
+        <view class="tit">历史搜索<span bindtap="clearHis">清除</span></view>
+        <ul>
+          <block wx:for="{{history}}">
+            <li>
+              <navigator url="">
+                {{item}}
+              </navigator>
+            </li>
+          </block>
+        </ul>
+      </view>
+    </block>
+
+    <view class="search-con">
+        <view class="tit">热门搜索<span>换一批</span></view>
+        <ul>
+          <block wx:for="{{hot}}">
+            <li>
+              <navigator url="">
+                {{item}}
+              </navigator>
+            </li>
+          </block>
+        </ul>
+      </view>
+  </view>
+</view>

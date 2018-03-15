@@ -1,1 +1,6 @@
-{}
+{
+  "navigationBarTitleText": "搜索",
+  "usingComponents": {
+    "fast-nav": "../../path/to/public/component/fastNav/fastNav"
+  }
+}

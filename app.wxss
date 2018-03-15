@@ -36,8 +36,11 @@ p{
 .flex{
   display: flex;
 }
-.container {
-  min-height:100vh;
+.wrap{
+
+} 
+.container.hasTopbar {
+  margin-top: 90rpx;
 } 
 .section{
   background: #fff;
@@ -71,7 +74,7 @@ p{
 } 
 .index-head.noTop{
   background:#fff;
-  border-bottom:1px solid #ddd;
+  border-bottom:1px solid #eee;
   transition: .5s all ease;
 }
 .index-head.noTop .toClassify{

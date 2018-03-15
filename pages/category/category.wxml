@@ -1,21 +1,21 @@
 <!--pages/category/category.wxml-->
 
 
-<view class="container">
+<view class="wrap">
   <!--topbar-->
   <view class="index-head noTop">
     <view class="search" bindtap="toSearchPage">
-      <image src="../../image/topbar-search.png" mode="widthFix"/>
+      <image src="../../path/to/public/image/topbar-search.png" mode="widthFix"/>
       <input placeholder-style="color:#999;" confirm-type="search" placeholder="搜索" disabled="true"/>
     </view>
   </view>
 
-  <view class="category-main">
+  <view class="container hasTopbar category-main">
     <view class="scroll-box category-lv1">
       <scroll-view scroll-y bindscroll="catScroll" scroll-top="">
-        <view data-id="hot" class="scroll-view-item {{category_act=='hot' ? 'active':''}}" bindtap="changeCategoryLv1">热搜推荐</view>
+        <view data-index="hot" class="scroll-view-item {{category_act=='hot' ? 'active':''}}" bindtap="changeCategoryLv1">热搜推荐</view>
         <block wx:for="{{categoryList}}" wx:key="{{item.cat_id}}">
-          <view data-id="{{index}}" class="scroll-view-item {{category_act==index ? 'active':''}}" bindtap="changeCategoryLv1">{{item.cat_name}}</view>
+          <view data-index="{{index}}" class="scroll-view-item {{category_act==index ? 'active':''}}" bindtap="changeCategoryLv1">{{item.cat_name}}</view>
         </block>
       </scroll-view>
     </view>
@@ -26,10 +26,10 @@
          <view class='cat_lv2_tit'>{{item.cat_name}}</view>
           <view class="cat_lv3_con">
             <block wx:for="{{item.cat_lv3}}" wx:for-item="itemLv3">
-              <view class="cat_lv3_item">
+              <navigator class="cat_lv3_item" hover-class='none'>
                 <image src="{{itemLv3.cat_img}}" mode="widthFix"/>
                 <view>{{itemLv3.cat_name}}</view>
-              </view>
+              </navigator>
             </block>
           </view>
         </block>
@@ -40,10 +40,10 @@
             <view class='cat_lv2_tit'>{{itemLv2.cat_name}}</view>
             <view class="cat_lv3_con">
               <block wx:for="{{itemLv2.cat_lv3}}" wx:for-item="itemLv3">
-               <view class="cat_lv3_item">
+               <navigator class="cat_lv3_item" hover-class='none'>
                 <image src="{{itemLv3.cat_img}}" mode="widthFix"/>
                 <view>{{itemLv3.cat_name}}</view>
-               </view>
+               </navigator>
               </block>
             </view>
           </block>

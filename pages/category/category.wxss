@@ -12,7 +12,6 @@ page{
   width:85%;
 }
 .category-main{
-  padding-top: 90rpx;
   display: flex;
 }
 .category-main scroll-view{

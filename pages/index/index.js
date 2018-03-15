@@ -10,9 +10,9 @@ Page({
     canIUse: wx.canIUse('button.open-type.getUserInfo'),
     swiperBannerImg:{
       'imgSrc':[
-        'http://img1.helper-sys.com/images/18/09/e1b3a58653a83bc5e79744ea23494f1c2f20d452.png?1519968640#w',
-        'http://img1.helper-sys.com/images/18/09/5d4de6d55a6d31dec9355161afec0955b49b6505.png?1519968664#w',
-        'http://img1.helper-sys.com/images/18/09/a1fac40e6aaab4fc0cc2a41aebadf819dfa836cd.png?1519968671#w'
+        'http://img2.helper-sys.com/images/18/11/45d8d2909cc076b1ba5b8a29c96b11b4f53ab315.png?1521075546#w',
+        'http://img2.helper-sys.com/images/18/11/e56c73843fcd1b8938f31106047edff539830308.png?1520847688#w',
+        'http://img0.helper-sys.com/images/18/10/4dc40dfffd8afea21c477ffc63e1233648bdb239.png?1520615728#w'
       ],
       'autoplay':true,
       'interval':3000,
