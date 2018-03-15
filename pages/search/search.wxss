@@ -19,7 +19,7 @@ page{
   margin-bottom:25rpx;
 }
 .search-con .tit span{
-  color:#f00;
+  color:#d74a45;
   font-size: 26rpx;
 }
 .search-con ul{

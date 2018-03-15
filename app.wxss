@@ -151,3 +151,30 @@ p{
   width: 80%;
   margin:4rpx auto 0;
 }
+
+/*  重写 checkbox 样式  */
+checkbox .wx-checkbox-input{
+   border-radius: 50%;
+   width: 40rpx;
+   height: 40rpx;
+}
+checkbox .wx-checkbox-input.wx-checkbox-input-checked{
+   border-color: #d74a45;
+   background: #d74a45;
+}
+checkbox .wx-checkbox-input.wx-checkbox-input-checked::before{
+   border-radius: 50%;
+   width: 40rpx;
+   height: 40rpx;
+   line-height: 40rpx;
+   text-align: center;
+   font-size:30rpx;
+   color:#fff;
+   background: transparent;
+   transform:translate(-50%, -50%) scale(1);
+   -webkit-transform:translate(-50%, -50%) scale(1);
+}
+
+.price{
+  color: #d74a45;
+}
