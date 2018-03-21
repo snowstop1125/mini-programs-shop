@@ -1,0 +1,110 @@
+/* pages/car/car.wxss */
+.edit{
+  position: fixed;
+  top: -1px;
+  right: 60rpx;
+  box-shadow: 0 1px 2px #999;
+  background: rgba(255, 255, 255, .7);
+  border-radius: 0 0 20rpx 20rpx; 
+  width:80rpx;
+  height: 50rpx;
+  line-height: 50rpx;
+  text-align: center;
+  font-size: 25rpx;
+  color: #888;
+  z-index: 1000;
+}
+.footBar{
+  position: fixed;
+  bottom: 0;
+  background: #fff;
+  box-shadow: 0px 0px 20rpx #999;
+  height: 100rpx;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.footBar .con-l{
+  margin-left:20rpx;
+  padding-top:30rpx;
+}
+.footBar .con-r{
+  display: flex;
+}
+.footBar .con-r .con-r-l{
+  text-align: right;
+  margin: 15rpx 15rpx 0 0;
+}
+.footBar .con-r .total{
+  font-weight: bold;
+  
+}
+.footBar .con-r .detail{
+  font-size: 20rpx;
+  color:#999;
+}
+.con-r .settle-btn{
+  background: #d74a45;
+  width:200rpx;
+  height: 100rpx;
+  line-height: 100rpx;
+  text-align: center;
+  color: #fff;
+  font-size: 32rpx;
+}
+.con-r .settle-btn text{
+  font-size: 22rpx;
+}
+.order-goods{
+  background: #fff;
+}
+.order-goods .order-header{
+  height: 80rpx;
+  line-height: 80rpx;
+  border-bottom: 1px solid #eee;
+  font-size: 32rpx;
+  color: #333;
+}
+.order-goods .order-header checkbox-group{
+  margin:0 10rpx 0 20rpx;
+}
+.order-goods .order-header .r-arrow{
+  margin-left: 10rpx;
+}
+.order-goods .item .head{
+  justify-content: space-between;
+
+  margin-left: 10rpx;
+}
+.order-goods .item .head{
+  justify-content: space-between;
+  align-items: center;
+  padding:20rpx 0;
+  font-size: 24rpx;
+  position: relative;
+}
+.order-goods .item .head::after{
+  content: "";
+  position: absolute;
+  z-index: 1;
+  pointer-events: none;
+  background-color: #eee;
+  height: 1px;
+  left: 80rpx;
+  right: 0;
+  bottom: 0;
+}
+.order-goods .item .head .con-l{
+  font-size: 24rpx;
+  margin-left: 10rpx;
+}
+.order-goods .item .head span{
+  background: #d74a45;
+  color: #fff;
+  padding:0 10rpx;
+  border-radius: 10rpx;
+}
+.order-goods .item .head navigator{
+  margin-right: 20rpx;
+  color:#bbb;
+}

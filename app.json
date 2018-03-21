@@ -1,7 +1,7 @@
 {
   "pages": [
     
-    "pages/car/car",
+    "pages/cart/cart",
     "pages/index/index",
     "pages/search/search",
     "pages/category/category",
@@ -39,7 +39,7 @@
         "selectedIconPath": "path/to/public/image/tabBar2-act.png"
       },
       {
-        "pagePath": "pages/car/car",
+        "pagePath": "pages/cart/cart",
         "text": "购物车",
         "iconPath": "path/to/public/image/tabBar3.png",
         "selectedIconPath": "path/to/public/image/tabBar3-act.png"

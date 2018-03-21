@@ -5,6 +5,30 @@ Page({
    * 页面的初始数据
    */
   data: {
+    cartList:[
+      {
+        shopId:1,
+        shopName:'ST自营店',
+        goodsList:[
+          {
+            name:'BURBERRY 巴宝莉 女士The Banner系列深沙色格纹织物配皮中号手提单肩包 40291681',
+            spec:'深沙色，中号',
+            price:'9900.00',
+            quantity:1,
+            promotion:[
+              {
+                id:212,
+                name:'满1000元减100元'
+              },
+              {
+                id: 213,
+                name: '满299元加69元可换购商品'
+              }
+            ]
+          }
+        ]
+      }
+    ]
   
   },
 
