@@ -11,6 +11,8 @@ Page({
         shopName:'ST自营店',
         goodsList:[
           {
+            goodsId:1,
+            imgSrc:'https://img10.360buyimg.com/n4/jfs/t13489/335/1275538362/307228/f51bf629/5a1d2553N14cbdcd0.jpg',
             name:'BURBERRY 巴宝莉 女士The Banner系列深沙色格纹织物配皮中号手提单肩包 40291681',
             spec:'深沙色，中号',
             price:'9900.00',

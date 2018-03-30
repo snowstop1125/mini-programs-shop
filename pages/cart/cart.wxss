@@ -108,3 +108,30 @@
   margin-right: 20rpx;
   color:#bbb;
 }
+.order-goods .item .goods{
+  display: flex;
+  padding:15rpx 0;
+}
+.order-goods .item .goods checkbox-group{
+  margin:80rpx 10rpx 0 20rpx;
+}
+.order-goods .item .goods .thumbnail{
+  margin-top: 20rpx;
+  display: flex;
+}
+.order-goods .item .goods .thumb-img{
+  width:150rpx;
+  height: 150rpx;
+}
+.order-goods .item .goods .thumb-img image{
+  /* max-height: 150rpx; */
+}
+.order-goods .item .goods .caption{
+  width:480rpx;
+  margin-left:20rpx;
+}
+.order-goods .item .goods .caption .pt-name{
+  font-size: 31rpx;
+  font-weight: bold;
+  color:#333;
+}

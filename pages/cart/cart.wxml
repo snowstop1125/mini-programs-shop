@@ -13,31 +13,56 @@
             <image class="r-arrow" src='../../path/to/public/image/right-arrow.png' mode='widthFix'/>
           </navigator>
         </view>
-        <view class="item item_connect">
-          <view class="head flex">
-            <view class='con-l'>
-              <span>满减</span>
-              购买1000元，可减100元，还差1000元
-            </view>
-            <navigator url="">去凑单 <image class="r-arrow" src='../../path/to/public/image/right-arrow.png' mode='widthFix'/></navigator>
-          </view>
-          <view class="goods">
-            <checkbox-group>
-              <label class="checkbox"><checkbox value="" /></label>
-            </checkbox-group>
-            <view class="thumbnail">
-              <view class="thumb-img">
-                <navigator>
-                   <image src="https://img10.360buyimg.com/n4/jfs/t13489/335/1275538362/307228/f51bf629/5a1d2553N14cbdcd0.jpg" mode='widthFix'/>
-                </navigator>
+
+        <block wx:for="{{item.goodsList}}" wx:key="goodsId" wx:for-item="goodsItem">
+           <view class="item item_connect">
+              <view class="head flex">
+                <view class='con-l'>
+                  <span>满减</span>
+                  购买1000元，可减100元，还差1000元
+                </view>
+                <navigator url="" hover-class='none'>去凑单 <image class="r-arrow" src='../../path/to/public/image/right-arrow.png' mode='widthFix'/></navigator>
               </view>
-              <view class="caption">
-              
+
+              <view class="goods">
+                <checkbox-group>
+                  <label class="checkbox"><checkbox value="" /></label>
+                </checkbox-group>
+                <view class="thumbnail">
+                  <view class="thumb-img">
+                    <navigator>
+                      <image src="{{goodsItem.imgSrc}}" mode='widthFix'/>
+                    </navigator>
+                  </view>
+                  <view class="caption">
+                    <text class="pt-name dslh">{{goodsItem.name}}</text>
+                    <text>{{goodsItem.spec}}</text>
+                    <view>￥{{goodsItem.price}}</view>
+                  </view>
+                </view>
               </view>
-              
+
+              <view class="goods">
+                <checkbox-group>
+                  <label class="checkbox"><checkbox value="" /></label>
+                </checkbox-group>
+                <view class="thumbnail">
+                  <view class="thumb-img">
+                    <navigator>
+                      <image src="{{goodsItem.imgSrc}}" mode='widthFix'/>
+                    </navigator>
+                  </view>
+                  <view class="caption">
+                    <text class="pt-name dslh">{{goodsItem.name}}</text>
+                    <text>{{goodsItem.spec}}</text>
+                    <view>￥{{goodsItem.price}}</view>
+                  </view>
+                </view>
+              </view>
+
             </view>
-          </view>
-        </view>
+        </block>
+       
        
       </view>
     </block>
