@@ -1,4 +1,7 @@
 /* pages/car/car.wxss */
+.wrap{
+  padding-bottom:110rpx;
+}
 .edit{
   position: fixed;
   top: -1px;
@@ -23,6 +26,7 @@
   width: 100%;
   display: flex;
   justify-content: space-between;
+  z-index: 2;
 }
 .footBar .con-l{
   margin-left:20rpx;
@@ -57,6 +61,7 @@
 }
 .order-goods{
   background: #fff;
+  margin-bottom:20rpx;
 }
 .order-goods .order-header{
   height: 80rpx;
@@ -108,9 +113,44 @@
   margin-right: 20rpx;
   color:#bbb;
 }
+.order-goods .item .head navigator .xy-center{
+  margin-left: 10rpx;
+}
 .order-goods .item .goods{
   display: flex;
   padding:15rpx 0;
+  position: relative;
+}
+.order-goods .item.item_connect{
+  position: relative;
+}
+.order-goods .item .goods::after,
+.order-goods .item.item_connect::after{
+  content: "";
+  position: absolute;
+  z-index: 1;
+  pointer-events: none;
+  background-color: #eee;
+  height: 1px;
+  left: 20rpx;
+  right: 0;
+  bottom: 0;
+}
+.order-goods .item.item_connect .goods::after,
+.order-goods .item .goods:last-child::after{
+  content: none;
+}
+.order-goods .item.item_connect .goods .line{
+  position: absolute;
+  height: 100%;
+  width: 1rpx;
+  border-right: 1px dashed #d74a45;
+  top:-18rpx; 
+  left: 40rpx;
+}
+
+.order-goods .item.item_connect .goods:last-child .line{
+  height: 140rpx;
 }
 .order-goods .item .goods checkbox-group{
   margin:80rpx 10rpx 0 20rpx;
@@ -123,9 +163,6 @@
   width:150rpx;
   height: 150rpx;
 }
-.order-goods .item .goods .thumb-img image{
-  /* max-height: 150rpx; */
-}
 .order-goods .item .goods .caption{
   width:480rpx;
   margin-left:20rpx;
@@ -134,4 +171,38 @@
   font-size: 31rpx;
   font-weight: bold;
   color:#333;
+}
+.order-goods .item .goods .caption .pt-spec{
+  font-size: 27rpx;
+}
+.order-goods .item .goods .caption .pt-price-num{
+  justify-content: space-between;
+   align-items:center;
+}
+.order-goods .item .goods .caption .price i{
+  font-size: 25rpx;
+}
+.order-goods .item .goods .caption .quantity{
+  display: flex;
+  border:1px solid #eee;
+  background:#f7f7f7;
+  border-radius: 6rpx;
+}
+.order-goods .item .goods .caption .quantity .btn{
+  width:50rpx;
+  height:50rpx;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+.order-goods .item .goods .caption .quantity .btn image{
+  width:30rpx;
+}
+.order-goods .item .goods .caption .quantity .input{
+  width:80rpx;
+  text-align:center;
+  color: #999;
+  border-width: 0px 1px 0px 1px;
+  border-color:#eee;
+  border-style:solid;
 }

@@ -2,29 +2,37 @@
   <view class="topline"></view>
   <view class="edit">编辑</view>
   <view class="container cart-main">
-    <block wx:for="{{cartList}}" wx:key="shopId">
+    <block wx:for="{{cartList}}" wx:key="shopId" wx:for-index="shopidx">
       <view class='order-goods'>
         <view class="order-header flex">
           <checkbox-group>
             <label class="checkbox"><checkbox value="" /></label>
           </checkbox-group>
-          <navigator url="" hover-class='none'>
+          <navigator url="" hover-class='none' class="flex">
             {{item.shopName}}
-            <image class="r-arrow" src='../../path/to/public/image/right-arrow.png' mode='widthFix'/>
+            <view class="xy-center">
+              <image class="r-arrow" src='../../path/to/public/image/right-arrow.png' mode='widthFix'/>
+            </view>
           </navigator>
         </view>
 
-        <block wx:for="{{item.goodsList}}" wx:key="goodsId" wx:for-item="goodsItem">
+        <block wx:for="{{item.goodsList}}" wx:key="goodsId" wx:for-item="goodsItem" wx:for-index="goodsidx">
            <view class="item item_connect">
-              <view class="head flex">
+              <view class="head flex"> 
                 <view class='con-l'>
                   <span>满减</span>
                   购买1000元，可减100元，还差1000元
                 </view>
-                <navigator url="" hover-class='none'>去凑单 <image class="r-arrow" src='../../path/to/public/image/right-arrow.png' mode='widthFix'/></navigator>
+                <navigator url="" hover-class='none' class="flex">
+                  去凑单
+                  <view class="xy-center">
+                    <image class="r-arrow" src='../../path/to/public/image/right-arrow.png' mode='widthFix'/>
+                  </view>
+                </navigator>
               </view>
 
               <view class="goods">
+                <i class="line"></i>
                 <checkbox-group>
                   <label class="checkbox"><checkbox value="" /></label>
                 </checkbox-group>
@@ -36,13 +44,25 @@
                   </view>
                   <view class="caption">
                     <text class="pt-name dslh">{{goodsItem.name}}</text>
-                    <text>{{goodsItem.spec}}</text>
-                    <view>￥{{goodsItem.price}}</view>
+                    <text class="pt-spec">{{goodsItem.spec}}</text>
+                    <view class="flex pt-price-num">
+                      <view class="price"><i>￥</i>{{goodsItem.price}}</view>
+                      <view class="quantity">
+                        <view class="btn" bindtap="minusbtn(shopidx,goodsidx)"><image class="" src='../../path/to/public/image/quantity-minus.png' mode='widthFix'/></view>
+                         <view class="input">
+                          <input value='{{goodsItem.quantity}}' />
+                        </view> 
+                        <view class="btn" data-sidx="{{shopidx}}" data-gidx="{{goodsidx}}"  bindtap="plusbtn"><image class="" src='../../path/to/public/image/quantity-plus.png' mode='widthFix'/></view>
+                      </view>
+                    </view>
+                    <view>
+                      dddddd
+                    </view>
                   </view>
                 </view>
               </view>
-
               <view class="goods">
+                <i class="line"></i>
                 <checkbox-group>
                   <label class="checkbox"><checkbox value="" /></label>
                 </checkbox-group>
@@ -54,15 +74,55 @@
                   </view>
                   <view class="caption">
                     <text class="pt-name dslh">{{goodsItem.name}}</text>
-                    <text>{{goodsItem.spec}}</text>
-                    <view>￥{{goodsItem.price}}</view>
+                    <text class="pt-spec">{{goodsItem.spec}}</text>
+                    <view class="flex pt-price-num">
+                      <view class="price"><i>￥</i>{{goodsItem.price}}</view>
+                      <view class="quantity">
+                        <view class="btn" bindtap="minusbtn(shopidx,goodsidx)"><image class="" src='../../path/to/public/image/quantity-minus.png' mode='widthFix'/></view>
+                         <view class="input">
+                          <input value='{{goodsItem.quantity}}' />
+                        </view> 
+                        <view class="btn" data-sidx="{{shopidx}}" data-gidx="{{goodsidx}}"  bindtap="plusbtn"><image class="" src='../../path/to/public/image/quantity-plus.png' mode='widthFix'/></view>
+                      </view>
+                    </view>
                   </view>
                 </view>
               </view>
 
             </view>
         </block>
-       
+
+        <block wx:for="{{item.goodsList}}" wx:key="goodsId" wx:for-item="goodsItem" wx:for-index="goodsidx">
+           <view class="item">
+              <view class="goods">
+                <checkbox-group>
+                  <label class="checkbox"><checkbox value="" /></label>
+                </checkbox-group>
+                <view class="thumbnail">
+                  <view class="thumb-img">
+                    <navigator>
+                      <image src="{{goodsItem.imgSrc}}" mode='widthFix'/>
+                    </navigator>
+                  </view>
+                  <view class="caption">
+                    <text class="pt-name dslh">{{goodsItem.name}}</text>
+                    <text class="pt-spec">{{goodsItem.spec}}</text>
+                    <view class="flex pt-price-num">
+                      <view class="price"><i>￥</i>{{goodsItem.price}}</view>
+                      <view class="quantity">
+                        <view class="btn" bindtap="minusbtn(shopidx,goodsidx)"><image class="" src='../../path/to/public/image/quantity-minus.png' mode='widthFix'/></view>
+                         <view class="input">
+                          <input value='{{goodsItem.quantity}}' />
+                        </view> 
+                        <view class="btn" data-sidx="{{shopidx}}" data-gidx="{{goodsidx}}"  bindtap="plusbtn"><image class="" src='../../path/to/public/image/quantity-plus.png' mode='widthFix'/></view>
+                      </view>
+                    </view>
+                  </view>
+                </view>
+              </view>
+
+            </view>
+        </block>
        
       </view>
     </block>

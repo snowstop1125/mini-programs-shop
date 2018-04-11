@@ -21,10 +21,26 @@ Page({
               {
                 id:212,
                 name:'满1000元减100元'
-              },
+              }
+            ]
+          }
+        ]
+      },
+      {
+        shopId: 2,
+        shopName: '云端商城',
+        goodsList: [
+          {
+            goodsId: 1,
+            imgSrc: 'https://m.360buyimg.com/n12/jfs/t17077/140/875325987/348157/3baf2019/5aaf8305N25ff25b6.jpg!q70.jpg',
+            name: '烟花烫2018春夏新款绣花复古花边淑女收腰中长修身连衣裙',
+            spec: '云诗,紫色,XL',
+            price: '228.00',
+            quantity: 1,
+            promotion: [
               {
-                id: 213,
-                name: '满299元加69元可换购商品'
+                id: 212,
+                name: '满1000元减100元'
               }
             ]
           }
@@ -38,7 +54,43 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-  
+    var cartList = this.data.cartList;
+    var promotion_arr=[];
+
+    for (var i = 0; i < cartList.length;i++){
+      var goodsList = cartList[i].goodsList;
+      for (var j = 0; j < goodsList.length;j++){
+        var promotion = goodsList[j].promotion;
+        var json={}
+        for (var k = 0; k < promotion.length;k++){
+          var key = promotion[k].id
+          if (json[key]) {
+            json[key]++;
+          } else {
+            json[key] = 1;
+          }
+          console.log(json)
+        }
+      }
+
+    }
+  },
+
+  plusbtn: function(e){
+    var shopidx = e.currentTarget.dataset.sidx;
+    var goodsidx = e.currentTarget.dataset.gidx;
+
+    var quantity = this.data.cartList[shopidx].goodsList[goodsidx].quantity;
+    
+    // var count = this.data.cartList[shopidx].goodsList[goodsidx].quantity;
+    // count++;
+    // console.log(count)
+    
+
+    this.setData({
+      quantity: quantity++
+    })
+    console.log(quantity)
   },
 
   /**

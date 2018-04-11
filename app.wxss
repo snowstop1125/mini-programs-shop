@@ -36,9 +36,12 @@ p{
 .flex{
   display: flex;
 }
-.wrap{
-
-} 
+.xy-center{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+ 
 .container.hasTopbar {
   margin-top: 90rpx;
 } 

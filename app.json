@@ -1,6 +1,6 @@
 {
   "pages": [
-    
+    "pages/member/member",
     "pages/cart/cart",
     "pages/index/index",
     "pages/search/search",
@@ -45,8 +45,8 @@
         "selectedIconPath": "path/to/public/image/tabBar3-act.png"
       },
       {
-        "pagePath": "pages/index/index",
-        "text": "个人中心",
+        "pagePath": "pages/member/member",
+        "text": "我的",
         "iconPath": "path/to/public/image/tabBar4.png",
         "selectedIconPath": "path/to/public/image/tabBar4-act.png"
       }
