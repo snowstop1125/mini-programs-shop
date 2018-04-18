@@ -33,12 +33,6 @@
         "selectedIconPath": "path/to/public/image/tabBar1-act.png"
       },
       {
-        "pagePath": "pages/index/index",
-        "text": "购物圈",
-        "iconPath": "path/to/public/image/tabBar2.png",
-        "selectedIconPath": "path/to/public/image/tabBar2-act.png"
-      },
-      {
         "pagePath": "pages/cart/cart",
         "text": "购物车",
         "iconPath": "path/to/public/image/tabBar3.png",

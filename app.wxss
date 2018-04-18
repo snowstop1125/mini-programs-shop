@@ -195,5 +195,4 @@ checkbox .wx-checkbox-input.wx-checkbox-input-checked::before{
   width: 12rpx;
   display: inline-block;
   vertical-align:middle;
-
 }

@@ -1,5 +1,54 @@
 <!--pages/member/member.wxml-->
+<view class="wrap">
+  <view class="member-head">
+    <view class="member-info">
+      <view class="info-l">
+        <view class="user-pic" bindtap="chooseImage">
+            <image src="{{userInfo.photo || '../../path/to/public/image/member-pic.png'}}" mode="widthFix"/>
+        </view>
+        <view class="user-name">
+          <navigator url="{{}}" hover-class='none' class="flex">
+            {{ userInfo.name || '登录'}}
+            <view class="xy-center">
+              <image class="r-arrow" src='../../path/to/public/image/right-arrow-fff.png' mode='widthFix'/>
+            </view>
+          </navigator>
+          <view class="user-vip">白金会员</view>
+        </view>
+      </view>
+      <view class='member-sign'>
+        每日签到
+      </view>
+    </view>
+    <view class="member-asset">
+      <view class="item">
+        <navigator url="" hover-class='none'>
+          <text class="val">￥20.00</text>
+          <text>红包</text>
+        </navigator>
+      </view>
+      <view class="item">
+        <navigator url="" hover-class='none'>
+          <text class="val">2张</text>
+          <text>优惠券</text>      
+        </navigator>
+      </view>
+      <view class="item">
+        <navigator url="" hover-class='none'>
+          <text class="val">0张</text>
+          <text>购物券</text>
+        </navigator>
+      </view>
+      <view class="item">
+        <navigator url="" hover-class='none'>
+          <text class="val">1026</text>
+          <text>积分</text>
+        </navigator>
+      </view>
+    </view>
 
-<view class="member-head">
+  </view>
 
 </view>
+
+    

@@ -86,7 +86,6 @@ Page({
     // count++;
     // console.log(count)
     
-
     this.setData({
       quantity: quantity++
     })

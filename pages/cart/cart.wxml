@@ -45,7 +45,7 @@
                   <view class="caption">
                     <text class="pt-name dslh">{{goodsItem.name}}</text>
                     <text class="pt-spec">{{goodsItem.spec}}</text>
-                    <view class="flex pt-price-num">
+                    <view class="flex pt-price-num"> 
                       <view class="price"><i>￥</i>{{goodsItem.price}}</view>
                       <view class="quantity">
                         <view class="btn" bindtap="minusbtn(shopidx,goodsidx)"><image class="" src='../../path/to/public/image/quantity-minus.png' mode='widthFix'/></view>
